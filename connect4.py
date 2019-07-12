@@ -27,6 +27,8 @@ YELLOW = (255, 255, 0)
 FONT_SIZE = 75
 X_FONT = 120
 Y_FONT = 10
+X_DRAW_FONT = 175
+Y_DRAW_FONT = 10
 
 def drop_piece(board, col, piece):
 	if(not is_valid_location(board,col)):
@@ -202,6 +204,17 @@ while not game_over:
 
 			print(board)
 			draw_board(board)
+
+			if(full_board(board)):
+				pygame.draw.rect(screen, BLACK, (0,0,width,SQUARE_SIZE))
+				label = myfont.render("It's a draw!", 1, BLUE)
+				screen.blit(label, (X_DRAW_FONT,Y_DRAW_FONT))
+				pygame.display.update()
+
+				print("It's a draw!!")
+				game_over = True
+
+
 
 
 			turn = (turn + 1)%2
