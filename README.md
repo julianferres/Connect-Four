@@ -1,2 +1,3 @@
-# Connect-Four
-Simple implementación en Python y Pygame del juego 4 en linea
+# Connect Four
+
+Simply implementation of classic Connect 4 game using Python and Pygame.
